@@ -1,0 +1,23 @@
+Microserver So for WordPress and MySQL on separate EC2 instances and configure the necessary security groups:
+
+ Setting up WordPress EC2 instance:
+
+1. Launch EC2 Instance for WordPress:
+   - Choose the Ubuntu AMI.
+   - Select the t2.micro instance type.
+   - Configure the security group to allow inbound traffic on ports 22 (SSH) and 80 (HTTP).
+
+2. Connect to WordPress EC2 Instance:
+   - Use PuTTY SSH client to connect to the WordPress EC2 instance using its public IP address and the private key (.pem file).
+
+3. Install Apache and PHP:
+   ```
+   sudo apt update
+   sudo apt install apache2 php php-mysql
+   ```
+
+4. Download WordPress:
+   ```
+   wget -c http://wordpress.org/latest.tar.gz
+   tar -xzvf latest.tar.gz
+   ```
